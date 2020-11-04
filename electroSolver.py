@@ -178,10 +178,21 @@ def ejercicio12():
   print('Flujo en S4 = (0) / eps0')
 
 def ejercicio13():
-  pass
+  Q = 170e-3
+  l = 0.8
+  print('Flujo en superficie cubo', Q/eps0)
+  print('Flujo en cada cara del cubo', Q/eps0/6)
+  print('Si la carga no esta en el centro, cambian algunos angulos y por lo tanto no se equidistritibuye')
 
 def ejercicio14():
-  pass
+  Q = 10e-3
+  l = 0.1
+  print('Hay 3 caras paralelas a la energia saliente, y por lo tanto tendran flujo 0')
+  print('Para las otras, pensemos en extender el cubo a uno de .2m, centrado en la carga')
+  print('Ahora sabemos que cada cara de ese cubo grande tiene', Q/eps0/6, 'de flujo')
+  print('Pero cada cuarta parte tiene', Q/eps0/6/4)
+  print('Entonces las restantes 3 caras del cubo original tienen de energia', Q/eps0/6/4, 'cada una')
+  print('Si el cubo es mas grande, no cambia nada, porque no depende lado')
 
-ejercicio9()
+ejercicio14()
 
