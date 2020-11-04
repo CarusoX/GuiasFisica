@@ -162,12 +162,15 @@ def ejercicio10():
   de = 1 / (1 + sqrt(3))
   print('V = 0 en', dv)
   print('E = 0 en', de)
-  
-
 
 def ejercicio11():
-  pass
-
+  print('Carga puntual rodeada por cordon => E = Q / (eps0 * 2 * PI * r)')
+  print('Carga puntual rodeada por cascaron 3D => E = Q / (eps0 * 4 * PI * r**2)')
+  print('Cascaron esferico delgado y conductor de radio R y carga uniforme Q => E = Q / (eps0 * 4 * PI * r**2)')
+  print('Linea infinita de carga con densidad lineal lambda => E = lambda / (2 * PI * eps0 * r) ')
+  print('Plano infinito de carga con densidad superficial lambda => E = lambda / (2 * eps0) ')
+  
+  
 def ejercicio12():
   print('Flujo en S1 = (Q - 2Q) / eps0')
   print('Flujo en S2 = (Q - Q) / eps0')
@@ -180,5 +183,5 @@ def ejercicio13():
 def ejercicio14():
   pass
 
-ejercicio12()
+ejercicio9()
 
