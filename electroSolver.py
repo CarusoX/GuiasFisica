@@ -194,5 +194,5 @@ def ejercicio14():
   print('Entonces las restantes 3 caras del cubo original tienen de energia', Q/eps0/6/4, 'cada una')
   print('Si el cubo es mas grande, no cambia nada, porque no depende lado')
 
-ejercicio14()
+ejercicio10()
 
