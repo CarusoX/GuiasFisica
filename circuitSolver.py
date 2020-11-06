@@ -1,7 +1,7 @@
 
 # Constants
 eps0 = 8.854e-12
-K = 2 # Aire, ...
+K = 1 # Aire, ...
 
 def genCapacitanciaSerie(c1, *c2):
   C = c1 * c2[0] / (c1 + c2[0])
