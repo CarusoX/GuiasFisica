@@ -34,7 +34,7 @@ def degreeToRad(alfa):
  - |F| = Q |E|
  - |E| = K * |Q| / d**2
  - V = K * Q / d
- - Psi = Qenc / eps0 = oint_ E dA (Integrar sobre el area del cuerpo que encierra teniendo en cuenta el vector energia)
+ - Psi = Qenc / eps0 = ∮ E dA (Integrar sobre el area del cuerpo que encierra teniendo en cuenta el vector energia)
 
 # Cosas a recordar
 De la energia, solo sabemos el modulo, dibujar para saber la direccion

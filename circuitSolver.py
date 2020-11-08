@@ -183,8 +183,9 @@ def ejercicio8():
   V = 12
   Cs = genCapacitanciaSerie(C1, C2)
   Rt = genResistenciaSerie(R1, Ri)
+  print(Cs, Rt)
   print('Constante de tiempo = ', Rt * Cs)
-  print('La medida de rapidez con que se carga / descarga un capacitor')
+  print('La medida de rapidez con que se carga un capacitor')
   Qs = getCarga(Cs, V)
   V2 = getVoltage(Qs, C2)
   print('Voltaje del capacitor de 6e-6F =', V2)
