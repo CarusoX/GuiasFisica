@@ -1,10 +1,11 @@
-from math import sin, pi as PI
+from math import sin,cos,atan,atan2, pi as PI, sqrt
 
 # Constants
 Qe = 1.602217653e-19 # Carga del electron o del proton
 mp = 1.673e-27 # masa proton 
 mn = 1.675e-27 # masa neutron
 me = 9.109e-31 # masa electron
+m0 = 4 * PI * 1e-7 # T * m / A
 g = 9.81
 
 def getFuerzaCableConCorriente(I, l, B, tita):
@@ -19,6 +20,13 @@ def getVelAng(v, R):
 def degreeToRad(alfa):
   return alfa * PI / 180
 
+def getCampoMagnetico(I, R):
+  return m0 * I / (2 * PI * R)
+
+def sumVectorPolar(r1, tita1, r2, tita2):
+  r = sqrt(r1**2 + r2**2 + 2*r1*r2*cos(tita2-tita1))
+  tita = tita1+atan2(r2*sin(tita2-tita1), r1+r2*cos(tita2-tita1))
+  return (r, tita)
 
 """
 # Unidades
@@ -31,6 +39,8 @@ def degreeToRad(alfa):
  - F = |q| * v * B -> Fuerza centripeta
  - R = m * v / (|q| * |B|) -> Radio del movimiento circular
  - ω = v / R = |q| * B / m -> Velocidad angular
+ - B = m0 * I / (2 * PI * R) -> Campo magnetico de un cable
+ 
 # Cosas a recordar
 
 mili => 1e-3
@@ -70,6 +80,20 @@ def ejercicio4():
   ω = getVelAng(v, R)
   print('Radio curvatura:', R)  
   print('Velocidad angular:', ω) # radianes por segundo
-  print('Frecuencia angular de rotacion:', (2*PI)/ω)
+  print('Frecuencia angular de rotacion:', ω/(2*PI))
 
-ejercicio4()
+def ejercicio5():
+  d = .1
+  l = .1
+  I = 1
+  diag = sqrt(l**2 + (d/2)**2)
+  mB = getCampoMagnetico(I, diag)
+  tita1,tita2 = atan(l/(d/2))-PI/2, -atan(l/(d/2))-PI/2
+  print("B =", sumVectorPolar(mB,tita1,mB,tita2))
+
+def ejercicio6():
+  print('Dibujalo y te das cuenta que el 0 ocurre en el medio')
+  print('Usa formula bizarra m0 * I / (2 * PI * R), igualalas, recorda que Ra+Rb=d y listo')
+  print('Ra = Ia * d / (Ia + Ib)')
+
+ejercicio5()
